@@ -15,7 +15,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("app.fxml"));
 
         Scene scene = new Scene(root, Color.LIGHTSKYBLUE);
-        scene.getStylesheets().add(String.valueOf(getClass().getResource("app.css")));
+        scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
 
         Image icon = new Image("./public/images/room_booking.png");
 
