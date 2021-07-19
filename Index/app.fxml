@@ -1,0 +1,55 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane fx:controller="Index.Controller" id="grid"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="20" vgap="20">
+    <padding><Insets top="15" right="10" bottom="15" left="10"/>
+    </padding>
+
+    <Text text="Available Rooms" GridPane.columnIndex="0" GridPane.columnSpan="10"
+          GridPane.rowIndex="0"/>
+    <TextArea fx:id="roomList"
+            GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="10"
+            GridPane.rowSpan="2" editable="false"/>
+
+    <Text text="Guest List" GridPane.columnIndex="10" GridPane.columnSpan="5"
+          GridPane.rowIndex="0"/>
+    <TextArea fx:id="guestList"
+            GridPane.columnIndex="10" GridPane.rowIndex="2" GridPane.columnSpan="5"
+            GridPane.rowSpan="2" editable="false"/>
+
+    <HBox spacing="10" alignment="bottom_left"
+          GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="10">
+        <Button text="Add room" onAction="#addRoom"/>
+    </HBox>
+    <HBox spacing="10" alignment="bottom_left"
+          GridPane.columnIndex="10" GridPane.rowIndex="4">
+        <Button text="Add person" onAction="#addPerson"/>
+    </HBox>
+
+    <Label text="Guest number: "
+           GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="3"/>
+    <TextField fx:id="guestNum"
+            GridPane.columnIndex="3" GridPane.rowIndex="7" maxWidth="30"/>
+    <Label text="Room number: "
+           GridPane.columnIndex="4" GridPane.rowIndex="7" GridPane.columnSpan="3"/>
+    <TextField fx:id="roomNum"
+            GridPane.columnIndex="7" GridPane.rowIndex="7" maxWidth="30"/>
+
+    <HBox spacing="10" alignment="bottom_left"
+          GridPane.columnIndex="10" GridPane.rowIndex="7" GridPane.columnSpan="1">
+        <Button text="Check In" onAction="#checkIn"/>
+    </HBox>
+    <HBox spacing="10" alignment="bottom_left"
+          GridPane.columnIndex="11" GridPane.rowIndex="7" GridPane.columnSpan="4">
+        <Button text="Check Out" onAction="#checkOut"/>
+    </HBox>
+
+</GridPane>
