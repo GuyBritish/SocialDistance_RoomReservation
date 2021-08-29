@@ -63,6 +63,7 @@ public class Room {
             throw new IllegalArgumentException("The person is already in the room.");
         }
         if (currOccupancy >= getCOVIDCapacity()) {
+            System.out.println("Sorry! This room has reached is recommended capacity!");
             return false;
         }
         for (int i = 0; i <= occupants.length - 1; ++i) {
@@ -84,6 +85,7 @@ public class Room {
         }
         // person is not in the room
         if (!contains(p)) {
+            System.out.println(p.getName() + " is not in this room.");
             return false;
         }
         for (int i = 0; i <= occupants.length - 1; ++i) {
