@@ -13,13 +13,13 @@
     <padding><Insets top="15" right="10" bottom="15" left="10"/>
     </padding>
 
-    <Text text="Available Rooms" GridPane.columnIndex="0" GridPane.columnSpan="10"
-          GridPane.rowIndex="0"/>
+    <Text styleClass="heading" text="Available Rooms" GridPane.columnIndex="0"
+    GridPane.columnSpan="10" GridPane.rowIndex="0" id="headingRoom"/>
     <TextArea fx:id="roomList"
             GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="10"
             GridPane.rowSpan="2" editable="false"/>
 
-    <Text text="Guest List" GridPane.columnIndex="10" GridPane.columnSpan="5"
+    <Text styleClass="heading" text="Guest List" GridPane.columnIndex="10" GridPane.columnSpan="5"
           GridPane.rowIndex="0"/>
     <TextArea fx:id="guestList"
             GridPane.columnIndex="10" GridPane.rowIndex="2" GridPane.columnSpan="5"
